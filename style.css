@@ -1,0 +1,528 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+:root {
+    --black: #00202A;
+    --white: #FFFFFF;
+    --button: #2D3648;
+    --navbar: #EDF0F7;
+  }
+
+@font-face {
+    font-family: "Sloth ExtraBold";
+    src: url("fonts/Sloth\ Extrabold.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}@font-face {
+    font-family: "Sloth Bold";
+    src: url("fonts/Sloth-Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}@font-face {
+    font-family: "Sloth Semibold";
+    src: url("fonts/Sloth-SemiBold.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}@font-face {
+    font-family: "Sloth Regular";
+    src: url("fonts/Sloth-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+
+}@font-face {
+    font-family: "Sloth Light";
+    src: url("fonts/Sloth-Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+    background-color: var(--white);
+
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 0px; 
+}
+
+
+/* Header */
+header {
+    background-color: #EDF0F7;
+    padding: 24px 0px;
+    position: sticky;
+    align-items: flex-start;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    gap: 40px
+
+}
+
+nav ul li {
+    display: inline-block;
+
+    
+}
+
+nav ul li a {
+    color: #00202A;
+    text-decoration: none;
+    font-family: 'Sloth Regular';
+    font-size: 1 rem;
+    transition: all 0.3s ease; 
+    position: relative; 
+    
+}
+
+.navbarlogo {
+    flex-grow: 1;
+    
+}
+
+
+nav ul li a:hover {
+    color: #717D96;
+    transition: all 0.3s ease-in-out; 
+
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    font-size: 60px;
+    cursor: pointer;
+    color: #00202A;
+    position: absolute;
+    margin-left: 40px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+
+/* Home */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 180px 0px 180px;
+}
+
+.intro {
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.intro-txt {
+    flex-grow: 1;
+    text-align: left;
+    margin-bottom: 64px;
+
+}
+
+.intro-txt h1 {
+    font-family: 'Sloth Semibold';
+    font-size: 40px;
+    color: var(--black);
+    margin-bottom: 32px;
+}
+
+.intro-txt h2 {
+    font-family: 'Sloth Regular';
+    font-size: 32px;
+    color: var(--black);
+    margin-bottom: 20px;
+}
+
+.intro-txt button{
+    background-color: var(--button);  
+    padding: 15px 30px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+}
+
+.intro-txt button a{
+    color: #fff;  
+    font-family: "Sloth Semibold";
+    font-size: 16px; 
+    text-decoration: none;
+}
+
+.intro-photo {
+    flex: 1;
+    text-align: right;
+}
+
+.intro-photo img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+
+}
+
+/*Gap*/
+#myprojects {
+    display: flex;
+    height: 70px;
+    background-color: #4285F4;
+}
+
+/* Projects */
+#projects {
+    padding: 64px 180px;
+    background-color: var(--white);
+    text-align: center;
+
+}
+
+.template-h1{
+    font-family: 'Sloth Semibold';
+    font-size: 40px;
+    color: var(--black);
+    margin-bottom: 48px;
+}
+
+
+.projects-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+
+ 
+}
+
+.projects-item {
+    display: flex;
+ 
+    text-align: left;
+    border-radius: 24px;
+    gap: 40px;
+    padding: 32px 48px;
+    background-color: var(--navbar);
+    transition: all 0.3s ease-in-out;
+}
+
+.projects-item:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.projects-item img {
+    width: auto;
+    max-width: 400px;
+    height: 240px;
+    border-radius: 5px;
+    object-fit: cover;
+
+}
+
+.projects-title {
+    font-family: 'Sloth Semibold';
+    font-weight: normal;
+    font-size: 32px;
+    color: var(--black);
+    margin-top: 10px;
+}
+
+.projects-description {
+    font-family: 'Sloth Regular';
+    font-size: 24px;
+    color: var(--black);
+    margin-top: 10px;
+}
+
+.project-btn {
+    font-family: 'Sloth Semibold';
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: var(--button); 
+    color: var(--white);
+
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    bottom: 10px;
+
+}
+
+.project-btn:hover {
+    background-color: #717D96;
+    color: var(--white); 
+
+}
+
+/*Gap*/
+#myskills {
+    display: flex;
+    height: 70px;
+    background-color: #34A853;
+}
+
+/* Skills */
+#skills{
+    text-align: center;
+    margin: 48px 0;
+
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    font-family: 'Sloth Semibold';
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: var(--black);
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--navbar);
+    padding: 20px 24px;
+    border-radius: 10px;
+}
+
+.skill:hover {
+    transform: scale(1.05);
+}
+
+.skill-logo {
+    width: auto;
+    height: 48px
+
+}
+
+/* Footer */
+footer {
+    background-color: var(--button);
+    color: #fff;
+    text-align: center;
+    padding: 48px 0;
+}
+
+footer p {
+    margin: 32px 0;
+    font-size: 16px;
+}
+
+.footer-content a {
+    gap: 40px;
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.footer-content a img{
+    height: auto;
+    width: 48px;
+}
+
+.footer-content a:hover {
+    color: #e7c2c2;
+}
+
+.socmed {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.socmed a {
+    transition: all 0.3s ease-in-out;
+}
+
+.socmed a:hover {
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+/*  Desktop Size */
+@media (min-width: 1024x) {
+    nav ul {
+        display: block; /* Menu visible on desktop */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger on desktop */
+    }
+}
+
+
+/* Tablet/Mobile Size */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 0px;
+    }
+
+    #home {
+        flex-direction: column;
+        padding: 0px 0px;
+        
+    }
+
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro-txt {
+        text-align: center;
+        padding-top: 64px;
+        
+    }
+
+    .intro-txt h1 {
+        font-size: 3rem;
+    }
+
+    .intro-txt p {
+        font-size: 1.5rem;
+    }
+
+    .intro-txt img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .intro-photo {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .intro-photo img {
+        width: 420px;
+        height: 420px;
+    }
+    #projects {
+        padding: 0px 40px;
+    }
+
+    .template-h1{
+        font-family: 'Sloth Semibold';
+        font-size: 40px;
+        color: var(--black);
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    .projects-list {
+
+        grid-gap: 40px;
+        margin: 0 0px;
+        object-fit: cover;
+    }
+
+    .projects-item {
+        align-items: center;
+        align-content: center;
+    }
+    
+
+    .projects-item img {
+        object-fit: cover;
+    }
+
+    .project-description, .skill-name {
+        font-size: 1.5rem;
+    }
+
+    .project-btn {
+        font-family: "Sloth Semibold";
+        font-size: 20px;
+        padding: 16px 32px;
+        border-radius: 12px;
+
+    }
+
+    .skills-grid {
+        gap: 10px;
+        margin: 0 20px;
+    }
+ 
+    footer {
+        padding: 15px 0;
+    }
+
+    .socmed {
+        gap: 10px;
+    }
+
+    nav {
+        font-size: 2rem;
+    }
+
+    nav ul.menu{
+        display: none; 
+    }
+
+    .hamburger {
+        display: block; 
+    }
+
+    nav ul.menu {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50%;
+        height: 100%; 
+        background-color: #EDF0F7;
+        opacity: 0.95;
+        padding: 2em 0;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+        transition: transform 0.4s ease; 
+        transform: translateX(-100%);
+        z-index: 9999; 
+        margin-top: 140px;
+    }
+
+    #menu-toggle:checked + .hamburger + nav ul.menu {
+        transform: translateX(0); 
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 80px 0;
+    }
+
+    nav ul li a {
+        font-size: 2rem;
+    }
+
+    header {
+        height: 140px;
+    }
+
+    .socmed img {
+        width: 70px;
+        height: 70px;
+    }
+}
